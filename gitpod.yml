@@ -1,0 +1,8 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      git clone --recursive https://github.com/theos/theos.git $HOME/theos || true
+      echo 'export THEOS=$HOME/theos' >> ~/.bashrc
+      echo 'export PATH=$THEOS/bin:$PATH' >> ~/.bashrc
